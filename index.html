@@ -1,0 +1,348 @@
+
+successfully.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CUANDERAS InjectID</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #151515;
+    }
+    .hacking-animation {
+      color: #eee;
+      height: 100%;
+    }
+    .hacking-animation__text {
+      top: 0;
+      font-family: "Share Tech Mono", monospace;
+      color: #eee;
+      font-size: 12px;
+      line-height: 1rem;
+      padding: 2rem;
+      position: absolute;
+      white-space: pre-wrap;
+      width: 100%;
+    }
+    .hacking-animation__character {
+      animation: type 80ms linear;
+      color: #45aae7;
+    }
+    .success {
+      color: #4caf50; /* Green for success */
+    }
+    .popup-btn {
+      background-color: #45aae7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 10px;
+      cursor: pointer;
+      margin-top: 1rem;
+      border-radius: 1px;
+    }
+    .popup-btn:hover {
+      background-color: #3498db;
+    }
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .prompt {
+      color: #45aae7;
+      font-weight: bold;
+    }
+    @keyframes type {
+      0% {
+        background: #151515;
+        color: #eee;
+      }
+      20% {
+        background: transparent;
+        color: #fff;
+      }
+      100% {
+        background: transparent;
+        color: #45aae7;
+      }
+    }
+    @keyframes option-slide {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .user-input {
+      border: none;
+      background: transparent;
+      color: #45aae7;
+      font-family: "Share Tech Mono", monospace;
+      font-size: 12px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="hacking-animation">
+    <pre class="hacking-animation__text"></pre>
+  </div>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function () {
+  let userIP = "Fetching...";
+
+  // Fetch user's IP
+  $.getJSON("https://api.ipify.org?format=json", function (data) {
+    userIP = data.ip;
+  }).fail(function () {
+    userIP = "Failed to fetch IP";
+  });
+
+  const textStringTemplate = `
+
+  CCCC   U   U   AAA   N   N  DDDD   EEEEE   RRRR    AAA   SSSSS
+ C       U   U  A   A  NN  N  D   D  E       R   R  A   A  S
+ C       U   U  AAAAA  N N N  D   D  EEEE    RRRR   AAAAA  SSSSS
+ C       U   U  A   A  N  NN  D   D  E       R  R   A   A      S
+  CCCC    UUU   A   A  N   N  DDDD   EEEEE   R   R  A   A  SSSSS
+                                                         
+
+///connecting.
+//connecting...
+`;
+
+  setTimeout(() => {
+    const textString = textStringTemplate;
+    const textArray = textString.split("");
+    const textElem = $(".hacking-animation__text");
+
+    let count = 0;
+
+    const interval = setInterval(() => {
+      if (textArray[count] === "\n") {
+        textElem.append("<br>");
+      } else {
+        textElem.append(
+          `<span class="hacking-animation__character">${textArray[count]}</span>`
+        );
+      }
+
+      count++;
+      if (count === textArray.length) {
+        clearInterval(interval);
+
+        // Update "connecting..." to "connected" in green color
+        setTimeout(() => {
+          textElem.append(`<br><span class="success">connected</span>`);
+
+          // Continue with existing animations
+          let domainAnimation = [
+            "Connecting to domain..",
+            "Connecting to domain...",
+            "Connecting to domain.."
+          ];
+          let domainCount = 0;
+          const domainInterval = setInterval(() => {
+            if (domainCount < domainAnimation.length) {
+              textElem.append(`<br>${domainAnimation[domainCount]}`);
+              domainCount++;
+            } else {
+              clearInterval(domainInterval);
+			  setTimeout(() => {
+  // Cari teks MEDUSATOTO dan tambahkan elemen untuk animasi
+  const MEDUSATOTO = $(".hacking-animation__text")
+    .find(".hacking-animation__character:contains('MEDUSATOTO')")
+    .last();
+
+  if (MEDUSATOTOText.length) {
+    // Tambahkan animasi "injecting..." di sebelahnya
+    MEDUSATOTOText.after(
+      `<span id="injecting-animation"></span>`
+    );
+
+    // Mulai animasi titik "injecting..."
+    let injectingDots = 0;
+    const injectingInterval = setInterval(() => {
+      if (injectingDots < 3) {
+        $("#injecting-animation").append(".");
+        injectingDots++;
+      } else {
+        clearInterval(injectingInterval);
+
+        // Ganti animasi dengan teks success
+        $("#injecting-animation").replaceWith(
+          `<span class="success"> success</span>`
+        );
+      }
+    }, 500);
+  }
+}, 1000);
+
+  // Tampilkan IP address
+                      $.getJSON("https://api.ipify.org?format=json", function(data) {
+                        const userIP = data.ip;
+                        textElem.append(
+                          `<br>Your IPv4: <span class="success">${userIP}</span><span class="success"> connected</span>`
+                        );
+                      }).fail(function () {
+                        textElem.append(
+                          `<br>Your IPv4: <span class="success">Unable to fetch IP</span>`
+                        );
+                      });
+
+
+              textElem.append(`<br><span class="hacking-animation__character">MEDUSATOTO</span>`);
+
+              setTimeout(() => {
+                const randomAPI = generateRandomString(20);
+                textElem.append(`<br>PUT API RESPONSE: ${randomAPI}`);
+                
+                setTimeout(() => {
+                  textElem.append(` <span class="success">Success</span>`);
+                  setTimeout(() => {
+                    const traceHashID = generateRandomString(11);
+                    textElem.append(`<br>Trace hash id: ${traceHashID}`);
+                    setTimeout(() => {
+                      const cookieValue = generateRandomAlphaString(25);
+                      textElem.append(`<br>Set Cookie: Auth = ${cookieValue}`);
+                      setTimeout(() => {
+                        textElem.append(`<br>Cache Control = <span id="cache-dots">...</span>`);
+                        setTimeout(() => {
+                          $("#cache-dots").replaceWith(`<span class="success">enable</span>`);
+                          setTimeout(() => {
+                            textElem.append(`<br>Transfer-Encoding = <span class="success">Chunked</span>`);
+                            setTimeout(() => {
+                              textElem.append(`<br><span class="success">Connected Successfully</span>`);
+                              setTimeout(() => {
+                                textElem.append(`<br><span class="hacking-animation__character option-slide">Silahkan Pilih Fitur untuk mengaktifkan:</span>`);
+                                textElem.append(`<br>`);
+                                textElem.append(`<span class="hacking-animation__character option-slide">1. Hide IP</span>`);
+                                textElem.append(`<br>`);
+                                textElem.append(`<span class="hacking-animation__character option-slide">2. Process</span>`);
+                                setTimeout(() => {
+                                  textElem.append(`<br><span class="prompt">root></span>`);
+                                  showCommandPrompt();
+                                }, 500);
+                              }, 1000);
+                            }, 1000);
+                          }, 2000);
+                        }, 1000);
+                      }, 1000);
+                    }, 1000);
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }
+          }, 1000);
+        }, 1000);
+      }
+    }, 20);
+  }, 500);
+
+  function generateRandomString(length) {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+  }
+
+  function generateRandomAlphaString(length) {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+  }
+
+// Update the showCommandPrompt function
+function showCommandPrompt() {
+  const userInputField = `<input type="text" class="user-input" id="userCommand" placeholder="silahkan pilih menu" />`;
+  $(".hacking-animation__text").append(userInputField);
+  $('#userCommand').focus();
+
+  // Listen for changes in the input field
+  $('#userCommand').on('input', function () {
+    const userChoice = $(this).val();
+    if (userChoice === "1" || userChoice === "2") {
+      $(this).remove(); // Remove the input field
+      handleUserChoice(userChoice); // Handle the user's choice
+    }
+  });
+}
+
+
+  let isHideIPActive = false;
+
+  function handleUserChoice(choice) {
+    if (choice === "1") {
+      isHideIPActive = !isHideIPActive;
+      if (isHideIPActive) {
+        $(".hacking-animation__text").append(`<br><span class="success">Hide IP: Aktif</span>`);
+      } else {
+        $(".hacking-animation__text").append(`<br><span style="color: green;">Hide IP: Tidak Aktif</span>`);
+      }
+      setTimeout(() => {
+        $(".hacking-animation__text").append(`<br><span class="prompt">root></span>`);
+        showCommandPrompt();
+      }, 1000);
+    } else if (choice === "2") {
+      showPopup();
+    } else {
+      $(".hacking-animation__text").append(`<br><span style="color: red;">Invalid option. Try again.</span>`);
+      setTimeout(() => {
+        $(".hacking-animation__text").append(`<br><span class="prompt">root></span>`);
+        showCommandPrompt();
+      }, 1000);
+    }
+  }
+
+function showPopup() {
+  const accessCode = generateRandomNumber(3); // Generate a random 3-digit number
+  const popupHTML = `
+    <div class="popup" id="popup">
+      <p><span class="success">Generating ID</span></p>
+      <p>Access Code = <span class="success">${accessCode}</span></p>
+      <button class="popup-btn" id="closePopup">Generate</button>
+    </div>
+  `;
+  $("body").append(popupHTML);
+  $("#closePopup").click(function () {
+    $("#popup").remove();
+    window.location.href = "https://medusatoto828.com/register?referral_code=cuanderas";
+  });
+}
+
+// Function to generate a random 3-digit number between 000 and 900
+function generateRandomNumber(length) {
+  const min = Math.pow(10, length - 1);
+  const max = Math.pow(10, length) - 1;
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+});
+</script>
+
+</body>
+</html>
